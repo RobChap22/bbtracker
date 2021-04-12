@@ -6,15 +6,10 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { listDB } from '@/api/apiCalls'
+// import { listDB } from '@/api/apiCalls'
 
 
 export default Vue.extend({
-  computed: {
-    pleaseWork() {
-      console.log(listDB)
-      return listDB;
-    }
-  }
+
 })
 </script>

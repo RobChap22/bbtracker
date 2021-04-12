@@ -38,7 +38,8 @@ export default {
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         // https://go.nuxtjs.dev/axios
-        '@nuxtjs/axios'
+        '@nuxtjs/axios',
+        '@nuxtjs/firebase'
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -47,6 +48,29 @@ export default {
     // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
     vuetify: {
         customVariables: ['~/assets/variables.scss'],
+    },
+
+    firebase: {
+        config: {
+            apiKey: "AIzaSyCouls6afJtqKigAUGgaXsnzI1VLu2iteA",
+            authDomain: "nuffle.firebaseapp.com",
+            projectId: "nuffle",
+            storageBucket: "nuffle.appspot.com",
+            messagingSenderId: "454376105794",
+            appId: "1:454376105794:web:ee326f241b5cba887a8adb",
+            measurementId: "G-7LCMM5B5KW"
+        },
+        services: {
+            auth: true,
+            firestore: true,
+            functions: true,
+            storage: true,
+            database: true,
+            messaging: true,
+            performance: true,
+            analytics: true,
+            remoteConfig: true
+        }
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
