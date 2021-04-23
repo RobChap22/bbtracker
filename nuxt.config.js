@@ -52,13 +52,13 @@ export default {
 
     firebase: {
         config: {
-            apiKey: "AIzaSyCouls6afJtqKigAUGgaXsnzI1VLu2iteA",
+            apiKey: "",
             authDomain: "nuffle.firebaseapp.com",
             projectId: "nuffle",
             storageBucket: "nuffle.appspot.com",
-            messagingSenderId: "454376105794",
-            appId: "1:454376105794:web:ee326f241b5cba887a8adb",
-            measurementId: "G-7LCMM5B5KW"
+            messagingSenderId: "",
+            appId: "",
+            measurementId: ""
         },
         services: {
             auth: true,
@@ -71,6 +71,18 @@ export default {
             analytics: true,
             remoteConfig: true
         }
+    },
+
+    auth: {
+        persistence: 'local', // default
+        initialize: {
+            onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
+            onAuthStateChangedAction: 'onAuthStateChangedAction',
+            subscribeManually: false
+        },
+        ssr: false, // default
+        emulatorPort: 9099,
+        emulatorHost: 'http://localhost',
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
